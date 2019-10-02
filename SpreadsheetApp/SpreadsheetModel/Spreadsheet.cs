@@ -54,7 +54,7 @@ namespace Spreadsheet.Model
         /// <param name="x">x axis value</param>
         /// <param name="y">y axis value</param>
         /// <returns></returns>
-        public bool HashValue(int x, int y)
+        public bool HasValue(int x, int y)
         {
             return _cells.ContainsKey(CantorPairing(x, y));
         }
