@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetApp", "SpreadsheetApp\SpreadsheetApp.csproj", "{BFD98A1E-5A12-4AF7-9199-BC8781553452}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15C394C9-2A94-473B-B941-DBB5FE6C1184}
+	EndGlobalSection
+EndGlobal
