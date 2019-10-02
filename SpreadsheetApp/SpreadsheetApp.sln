@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetApp", "SpreadsheetApp\SpreadsheetApp.csproj", "{BFD98A1E-5A12-4AF7-9199-BC8781553452}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonModel", "CommonModel\CommonModel.csproj", "{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFD98A1E-5A12-4AF7-9199-BC8781553452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
