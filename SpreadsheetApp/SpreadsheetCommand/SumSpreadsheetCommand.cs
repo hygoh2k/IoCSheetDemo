@@ -90,7 +90,7 @@ namespace Spreadsheet.Model
                         {
                             float value;
                             if (input.HashValue(x, y) 
-                                && float.TryParse(input[x, y], out value))
+                                && float.TryParse(input[x, y].ToString(), out value))
                             {
                                 sum += value;
                             }

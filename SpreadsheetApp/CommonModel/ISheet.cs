@@ -15,6 +15,6 @@ namespace Common.Model
         int Height { get; }
         bool HashValue(int x, int y);
         bool IsWithinRange(int x, int y);
-        string this[int x, int y] { get; set; }
+        object this[int x, int y] { get; set; }
     }
 }
