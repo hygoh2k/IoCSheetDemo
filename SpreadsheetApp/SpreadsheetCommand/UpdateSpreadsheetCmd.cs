@@ -52,7 +52,7 @@ namespace Spreadsheet.Model
                 }
                 else
                 {
-                    input[x, y] = value;
+                    input[x, y] = value.ToString();
                     result.Spreadsheet = input;
                     result.Success = true;
                 }

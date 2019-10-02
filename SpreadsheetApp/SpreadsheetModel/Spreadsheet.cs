@@ -16,7 +16,7 @@ namespace Spreadsheet.Model
     public class SimpleSpreadsheet : ISheet
     {
         //collection of cells that mapped with unique keys
-        private IDictionary<int, float> _cells;
+        private IDictionary<int, string> _cells;
         
         /// <summary>
         /// width of the sheet
@@ -30,7 +30,7 @@ namespace Spreadsheet.Model
 
         public SimpleSpreadsheet(int width, int height)
         {
-            _cells = new Dictionary<int, float>();
+            _cells = new Dictionary<int, string>();
             Width = width;
             Height = height;
         }
@@ -77,7 +77,7 @@ namespace Spreadsheet.Model
         /// <param name="x">x axis value</param>
         /// <param name="y">y axis value</param>
         /// <returns></returns>
-        public float this[int x, int y]
+        public string this[int x, int y]
         {
             get
             {
@@ -85,7 +85,7 @@ namespace Spreadsheet.Model
                     throw new IndexOutOfRangeException();
 
                 int hash = CantorPairing(x, y);
-                return _cells.ContainsKey(hash) ? _cells[hash] : 0;
+                return _cells.ContainsKey(hash) ? _cells[hash] : "0";
             }
 
 

@@ -88,15 +88,17 @@ namespace Spreadsheet.Model
                     {
                         for (int y = fromY; y <= toY; y++)
                         {
-                            if (input.HashValue(x, y))
+                            float value;
+                            if (input.HashValue(x, y) 
+                                && float.TryParse(input[x, y], out value))
                             {
-                                sum += input[x, y];
+                                sum += value;
                             }
                         }
 
                     }
 
-                    input[targetX, targetY] = sum;
+                    input[targetX, targetY] = sum.ToString();
                     result.Spreadsheet = input;
                 }
                 return result;
