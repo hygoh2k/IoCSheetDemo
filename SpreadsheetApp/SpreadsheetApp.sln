@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetApp", "Spreadshe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonModel", "CommonModel\CommonModel.csproj", "{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetModel", "SpreadsheetModel\SpreadsheetModel.csproj", "{F7BBC77D-E928-4282-AF0D-EE6E475C075F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BBC77D-E928-4282-AF0D-EE6E475C075F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BBC77D-E928-4282-AF0D-EE6E475C075F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BBC77D-E928-4282-AF0D-EE6E475C075F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BBC77D-E928-4282-AF0D-EE6E475C075F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
