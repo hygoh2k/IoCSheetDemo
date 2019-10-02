@@ -51,11 +51,20 @@
   <ItemGroup>
     <Compile Include="SimpleSpreadsheetTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CreateSpreadsheetCmdTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonModel\CommonModel.csproj">
+      <Project>{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}</Project>
+      <Name>CommonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpreadsheetCommand\SpreadsheetCommand.csproj">
+      <Project>{8C7391AA-7BBD-4A4A-AE92-7A7E0D5E3AC3}</Project>
+      <Name>SpreadsheetCommand</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SpreadsheetModel\SpreadsheetModel.csproj">
       <Project>{f7bbc77d-e928-4282-af0d-ee6e475c075f}</Project>
       <Name>SpreadsheetModel</Name>
