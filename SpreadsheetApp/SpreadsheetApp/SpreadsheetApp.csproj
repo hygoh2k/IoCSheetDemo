@@ -62,5 +62,19 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonModel\CommonModel.csproj">
+      <Project>{7899DDB2-0EEC-4DFD-8D4B-A5458A4EFB5C}</Project>
+      <Name>CommonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpreadsheetCommand\SpreadsheetCommand.csproj">
+      <Project>{8C7391AA-7BBD-4A4A-AE92-7A7E0D5E3AC3}</Project>
+      <Name>SpreadsheetCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpreadsheetManager\SpreadsheetManager.csproj">
+      <Project>{caa5e643-6a50-44d5-bef3-d36ba3359830}</Project>
+      <Name>SpreadsheetManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
