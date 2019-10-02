@@ -78,5 +78,16 @@ namespace SpreadsheetTest
             Assert.IsFalse(result.Success);
         }
 
+        /// <summary>
+        /// added invalid argument test
+        /// </summary>
+        [TestMethod]
+        public void UpdateSpreadInvalidArgumentTest()
+        {
+            UpdateSpreadsheetCommand cmd = new UpdateSpreadsheetCommand("");
+            var result = cmd.Execute(null, "3", "4", "5", "6");
+            Assert.IsFalse(result.Success);
+        }
+
     }
 }

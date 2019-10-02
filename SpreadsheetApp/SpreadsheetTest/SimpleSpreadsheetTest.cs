@@ -7,6 +7,9 @@ namespace SpreadsheetTest
     [TestClass]
     public class SimpleSpreadsheetTest
     {
+        /// <summary>
+        /// normal update test
+        /// </summary>
         [TestMethod]
         public void TestNormalUpdate()
         {
@@ -23,8 +26,11 @@ namespace SpreadsheetTest
 
         }
 
+        /// <summary>
+        /// index out of range test
+        /// </summary>
         [TestMethod]
-        public void TestIndexOutOfRangeException()
+        public void TestIndexOutOfRange()
         {
             var sheet = new SimpleSpreadsheet(2, 3);
             sheet[0, 0] = 1;

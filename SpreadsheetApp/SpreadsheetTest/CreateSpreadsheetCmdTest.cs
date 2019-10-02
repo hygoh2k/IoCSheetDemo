@@ -35,5 +35,17 @@ namespace SpreadsheetTest
             var result = cmd.Execute(null, "-1", "-2");
             Assert.IsFalse(result.Success);
         }
+
+
+        /// <summary>
+        /// added invalid argument test
+        /// </summary>
+        [TestMethod]
+        public void CreateSpreadsheetInvalidArgumentTest()
+        {
+            SpreadsheetCommand cmd = new CreateSpreadsheetCommand("");
+            var result = cmd.Execute(null, "3", "4", "5");
+            Assert.IsFalse(result.Success);
+        }
     }
 }
