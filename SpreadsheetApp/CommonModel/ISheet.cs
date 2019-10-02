@@ -13,7 +13,7 @@ namespace Common.Model
     {
         int Width { get; }
         int Height { get; }
-        bool HashValue(int x, int y);
+        bool HasValue(int x, int y);
         bool IsWithinRange(int x, int y);
         object this[int x, int y] { get; set; }
     }

@@ -40,7 +40,7 @@ namespace Spreadsheet.Model
             {
                 for (int x = 0; x < spreadsheet.Width; x++)
                 {
-                    if (spreadsheet.HashValue(x, y))
+                    if (spreadsheet.HasValue(x, y))
                     {
                         string value = spreadsheet[x, y].ToString();
                         tw.Write(value);
