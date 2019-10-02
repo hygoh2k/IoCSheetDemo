@@ -64,11 +64,11 @@ namespace SpreadsheetApp
                 var sheetManager = _container.Resolve<SpreadsheetCollection>();
                 var sheetPrinter = _container.Resolve<ISheetPrinter>();
 
-                Console.WriteLine("Enter command");
+                
                 ISheet currentSheet = null;
                 while (true)
                 {
-                    Console.Write(">");
+                    Console.Write("enter command:");
                     string[] input = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                     string cmdKey = input.Length > 0 ? input[0] : "";
 
