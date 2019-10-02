@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetCommand", "Sprea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetManager", "SpreadsheetManager\SpreadsheetManager.csproj", "{CAA5E643-6A50-44D5-BEF3-D36BA3359830}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{CC06243F-DE66-416E-B19B-916DCFE7AA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadsheetTest", "SpreadsheetTest\SpreadsheetTest.csproj", "{0E7F48DA-8439-4EE4-AC15-ECC926B45DCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,16 @@ Global
 		{CAA5E643-6A50-44D5-BEF3-D36BA3359830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA5E643-6A50-44D5-BEF3-D36BA3359830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA5E643-6A50-44D5-BEF3-D36BA3359830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7F48DA-8439-4EE4-AC15-ECC926B45DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7F48DA-8439-4EE4-AC15-ECC926B45DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7F48DA-8439-4EE4-AC15-ECC926B45DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7F48DA-8439-4EE4-AC15-ECC926B45DCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E7F48DA-8439-4EE4-AC15-ECC926B45DCF} = {CC06243F-DE66-416E-B19B-916DCFE7AA6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15C394C9-2A94-473B-B941-DBB5FE6C1184}
