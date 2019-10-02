@@ -39,7 +39,7 @@ namespace Spreadsheet.Model
             {
                 if (width >= 1 && height >= 1)
                 {
-                    result.Spreadsheet = new Spreadsheet(width, height);
+                    result.Spreadsheet = new SimpleSpreadsheet(width, height);
                     result.Success = true;
                 }
                 else
