@@ -13,7 +13,7 @@ namespace Spreadsheet.Model
     /// A spread sheet model that contains cells collection
     /// 
     /// </summary>
-    public class Spreadsheet : ISheet
+    public class SimpleSpreadsheet : ISheet
     {
         //collection of cells that mapped with unique keys
         private IDictionary<int, float> _cells;
@@ -28,7 +28,7 @@ namespace Spreadsheet.Model
         /// </summary>
         public int Height { get; private set; }
 
-        public Spreadsheet(int width, int height)
+        public SimpleSpreadsheet(int width, int height)
         {
             _cells = new Dictionary<int, float>();
             Width = width;
