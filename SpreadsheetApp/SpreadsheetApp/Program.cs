@@ -108,7 +108,10 @@ namespace SpreadsheetApp
             }
             finally
             {
+                //set exit code
                 Environment.ExitCode = exitCode;
+                //dispose dependencies
+                _container.Dispose();
             }
         }
     }
