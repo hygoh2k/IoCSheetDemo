@@ -12,11 +12,11 @@ namespace Spreadsheet.Model
     /// <summary>
     /// a container that stores a collection of spreadsheet command list
     /// </summary>
-    public class SpreadsheetCollection
+    public class SpreadsheetCmdCollection
     {
         public IReadOnlyDictionary<string, SpreadsheetCommand> CommandCollection { get; private set; }
 
-        public SpreadsheetCollection(SpreadsheetCommand[] cmdList)
+        public SpreadsheetCmdCollection(SpreadsheetCommand[] cmdList)
         {
             Dictionary<string, SpreadsheetCommand> cmdCollection = new Dictionary<string, SpreadsheetCommand>();
             foreach (var cmd in cmdList)

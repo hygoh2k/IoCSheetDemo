@@ -15,35 +15,51 @@ namespace SpreadsheetApp
 {
     class Program
     {
+        /// <summary>
+        /// IoC container 
+        /// </summary>
         private static Castle.Windsor.WindsorContainer _container;
 
+        /// <summary>
+        /// Registers the commands that derived from ICommand and their dependencies
+        /// into IoC container.
+        /// </summary>
+        /// todo: move to configuration file
         static void RegisterComponents()
         {
+            //register CreateSpreadsheetCommand with the key "C"
             _container.Register(Component.For<SpreadsheetCommand>()
                 .ImplementedBy<CreateSpreadsheetCommand>()
                 .DependsOn(Dependency.OnValue("cmdKey", "C"))
             );
 
+            //register UpdateSpreadsheetCommand with key "N"
             _container.Register(Component.For<SpreadsheetCommand>()
                 .ImplementedBy<UpdateSpreadsheetCommand>()
                 .DependsOn(Dependency.OnValue("cmdKey", "N"))
 
             );
 
+            //register SumSpreadsheetCommand with key "S"
             _container.Register(Component.For<SpreadsheetCommand>()
                 .ImplementedBy<SumSpreadsheetCommand>()
                 .DependsOn(Dependency.OnValue("cmdKey", "S"))
-
             );
 
-            _container.Register(Component.For<SpreadsheetCollection>());
+            //register the SpreadsheetCmdCollection that hold the Commands Instances
+            //Command Instances will be injected into Collection by IoC Container
+            _container.Register(Component.For<SpreadsheetCmdCollection>());
 
+            //register the SpreadsheetPrinter that display spreadsheet in text format
             _container.Register(Component.For<ISheetPrinter>()
                 .ImplementedBy<SpreadsheetPrinter>());
 
 
         }
 
+        /// <summary>
+        /// setting up the IoC container, which is required to resolve the component dependencies
+        /// </summary>
         static void SetupContainer()
         {
             _container = new WindsorContainer();
@@ -51,6 +67,10 @@ namespace SpreadsheetApp
             _container.Kernel.Resolver.AddSubResolver(new CollectionResolver(_container.Kernel));
         }
 
+        /// <summary>
+        /// main entry point of the application
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             //setup Dependency Container
@@ -61,27 +81,36 @@ namespace SpreadsheetApp
             int exitCode = 0x0;
             try
             {
-                var sheetManager = _container.Resolve<SpreadsheetCollection>();
+                var cmdCollection = _container.Resolve<SpreadsheetCmdCollection>();
                 var sheetPrinter = _container.Resolve<ISheetPrinter>();
 
-                
+                //variable that hold the current sheet
                 ISheet currentSheet = null;
                 while (true)
                 {
                     Console.Write("enter command:");
+
+                    //extract a series of parameters in user input with a space separator
+                    //format of the command line: <command key> <param1> <param2> <param3> ...
+                    //e.g. N 5 6
                     string[] input = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    //command key is the first parameter
                     string cmdKey = input.Length > 0 ? input[0] : "";
 
                     if (cmdKey.Equals("Q"))
                     {
+                        //break the loop amd end this application
                         break;
                     }
 
+                    //the subsequent parameters will be used as command arguments
                     string[] cmdArgs = input.Length > 1 ? input.Skip(1).ToArray() : new string[] { };
 
-                    if (sheetManager.CommandCollection.ContainsKey(cmdKey))
+                    //start matching the command key with the registered commands 
+                    if (cmdCollection.CommandCollection.ContainsKey(cmdKey))
                     {
-                        var cmd = sheetManager.CommandCollection[cmdKey];
+                        var cmd = cmdCollection.CommandCollection[cmdKey];
                         var result = cmd.Execute(currentSheet, cmdArgs);
                         if (result.Success)
                         {

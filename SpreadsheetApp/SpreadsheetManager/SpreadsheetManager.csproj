@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SpreadsheetCollection.cs" />
+    <Compile Include="SpreadsheetCmdCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpreadsheetPrinter.cs" />
   </ItemGroup>
