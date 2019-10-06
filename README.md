@@ -4,10 +4,10 @@
 
 
 
-#Introduction:
+# Introduction:
 This application allows user to create/update/calculating the total values in the spreadsheet using command line interface 
 
-#Use Case Examples
+# Use Case Examples
 1) create a 10x5 spreadsheet
 enter command:C 10 5
 0   1   2   3   4   5   6   7   8   9
@@ -83,7 +83,12 @@ enter command:S 1 1 4 2 0 0
 
 ----------------------------------------
 
+# Development environment and Library
+IDE: Microsoft Visual Studio Community 2017
+Framework: .NET Framework 4.5
+Container: Castle Windsor 5.0.0.0
 
+ 
 # Solution Structure
 The Solution contains the following projects
 The solution contains the following projects
@@ -92,6 +97,10 @@ The solution contains the following projects
 3    SpreadsheetCommand: contains commands classes that perform basic functions such as create/update/sum worksheet
 4    SpreadsheetManager: contains collection model that stores a list of command and methods to print spreadsheet
 5    SpreadsheetModel: contains the Simple spreadsheet model.
+
+# Build and run the application in visual studio: 
+Build the SpreadsheetApp solution and run SpreadsheetApp project.
+
 
 # Design Overview
 ## IoC Container
